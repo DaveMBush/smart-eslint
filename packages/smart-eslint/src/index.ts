@@ -1,1 +1,1 @@
-export * from './lib/one-exported-item-per-file/index';
+export * from './lib/one-exported-item-per-file/one-exported-item-per-file';
