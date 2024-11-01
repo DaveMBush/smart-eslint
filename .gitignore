@@ -40,3 +40,5 @@ Thumbs.db
 .angular
 .vscode/extensions.json
 .vscode/extensions.json
+.env
+.cursorrules
