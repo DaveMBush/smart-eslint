@@ -2,7 +2,16 @@
   "name": "@smart-eslint/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx affected:build",
+    "lint": "nx affected:lint",
+    "lint:fix": "nx affected:lint --fix",
+    "test": "nx affected:test",
+    "test:coverage": "nx affected:test --coverage",
+    "format": "nx affected:format",
+    "dupcheck": "pnpm jscpd",
+    "reset": "rm -rf dist && rm -rf node_modules && rm -rf .angular && rm -rf .nx && pnpm install"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~18.2.0",
