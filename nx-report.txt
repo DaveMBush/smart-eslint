@@ -1,0 +1,35 @@
+
+ NX   Report complete - copy this into the issue template
+
+Node           : 20.14.0
+OS             : linux-x64
+Native Target  : x86_64-linux
+pnpm           : 9.3.0
+
+nx                      : 20.0.7
+@nx/js                  : 20.0.7
+@nx/jest                : 20.0.7
+@nx/linter              : 17.1.2
+@nx/eslint              : 20.0.7
+@nx/workspace           : 20.0.7
+@nx/angular             : 20.0.7
+@nx/cypress             : 20.0.7
+@nx/devkit              : 20.0.7
+@nx/esbuild             : 20.0.7
+@nx/eslint-plugin       : 20.0.7
+@nrwl/eslint-plugin-nx  : 17.1.2
+@nx/nest                : 20.0.7
+@nx/next                : 20.0.7
+@nx/node                : 20.0.7
+@nx/react               : 20.0.7
+@nx/web                 : 20.0.7
+@nx/webpack             : 20.0.7
+nx-cloud                : 19.1.0
+typescript              : 5.5.4
+---------------------------------------
+The following packages should match the installed version of nx
+  - @nx/linter@17.1.2
+  - @nrwl/eslint-plugin-nx@17.1.2
+
+To fix this, run `nx migrate nx@20.0.7`
+
