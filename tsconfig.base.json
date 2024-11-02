@@ -17,7 +17,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@smarttools/smart-eslint": ["packages/smart-eslint/src/index.ts"]
+      "@smarttools/eslint-plugin": ["packages/eslint-plugin/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

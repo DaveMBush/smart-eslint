@@ -1,5 +1,5 @@
 {
-  "name": "@smarttools/smart-eslint",
+  "name": "@smarttools/eslint-plugin",
   "version": "0.0.1",
   "dependencies": {},
   "type": "commonjs",

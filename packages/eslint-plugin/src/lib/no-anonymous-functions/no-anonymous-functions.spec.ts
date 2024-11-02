@@ -5,7 +5,11 @@ import { convertAnnotatedSourceToFailureCase } from '@angular-eslint/test-utils'
 const ruleTester = new RuleTester();
 
 ruleTester.run(RULE_NAME, rule, {
-  valid: [`function example() {}`, `export function example() {}`, `const namedFunctionExpression = function named() { return true; };`],
+  valid: [
+    `function example() {}`,
+    `export function example() {}`,
+    `const namedFunctionExpression = function named() { return true; };`,
+  ],
   invalid: [
     convertAnnotatedSourceToFailureCase({
       messageId,
