@@ -2,7 +2,7 @@ import { ESLintUtils, TSESTree } from '@typescript-eslint/utils';
 
 export const RULE_NAME = 'no-anonymous-functions';
 export const messageId = 'anonymousFunctionsNotAllowed';
-export const rule = ESLintUtils.RuleCreator(() => __filename)({
+export default ESLintUtils.RuleCreator(() => __filename)({
   name: RULE_NAME,
   meta: {
     type: 'problem',

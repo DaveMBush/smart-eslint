@@ -1,5 +1,6 @@
 import { RuleTester } from '@typescript-eslint/rule-tester';
-import { rule, RULE_NAME, messageId } from './no-anonymous-functions';
+import { RULE_NAME, messageId } from './no-anonymous-functions';
+import rule from './no-anonymous-functions';
 import { convertAnnotatedSourceToFailureCase } from '@angular-eslint/test-utils';
 
 const ruleTester = new RuleTester();

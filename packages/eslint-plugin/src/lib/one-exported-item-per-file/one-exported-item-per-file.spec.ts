@@ -1,5 +1,6 @@
 import { RuleTester } from '@typescript-eslint/rule-tester';
-import { rule, RULE_NAME, messageId } from './one-exported-item-per-file';
+import { RULE_NAME, messageId } from './one-exported-item-per-file';
+import rule from './one-exported-item-per-file';
 import { convertAnnotatedSourceToFailureCase } from '@angular-eslint/test-utils';
 
 const ruleTester = new RuleTester();
