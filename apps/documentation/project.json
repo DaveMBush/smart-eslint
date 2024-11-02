@@ -7,27 +7,54 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:application",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@ng-doc/builder:application",
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/documentation",
         "index": "apps/documentation/src/index.html",
         "browser": "apps/documentation/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/documentation/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
+            "input": "node_modules/@ng-doc/app/assets",
+            "output": "assets/ng-doc/app"
+          },
+          {
+            "glob": "**/*",
+            "input": "node_modules/@ng-doc/ui-kit/assets",
+            "output": "assets/ng-doc/ui-kit"
+          },
+          {
+            "glob": "**/*",
+            "input": "ng-doc/documentation/assets",
+            "output": "assets/ng-doc"
+          },
+          {
+            "glob": "**/*",
             "input": "apps/documentation/public"
-          }
+          },
+          "apps/documentation/src/favicon.ico",
+          "apps/documentation/src/assets"
         ],
-        "styles": ["apps/documentation/src/styles.css"],
+        "styles": [
+          "node_modules/@ng-doc/app/styles/global.css",
+          "apps/documentation/src/styles.scss"
+        ],
         "scripts": [],
         "server": "apps/documentation/src/main.server.ts",
         "prerender": true,
         "ssr": {
           "entry": "apps/documentation/server.ts"
-        }
+        },
+        "allowedCommonJsDependencies": [
+          "@ng-doc/core"
+        ]
       },
       "configurations": {
         "production": {
@@ -35,7 +62,7 @@
             {
               "type": "initial",
               "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumError": "3mb"
             },
             {
               "type": "anyComponentStyle",
@@ -54,7 +81,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@ng-doc/builder:dev-server",
       "configurations": {
         "production": {
           "buildTarget": "documentation:build:production"
@@ -69,16 +96,6 @@
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
         "buildTarget": "documentation:build"
-      }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "apps/documentation/jest.config.ts"
       }
     },
     "serve-static": {

@@ -42,3 +42,9 @@ Thumbs.db
 .vscode/extensions.json
 .env
 .cursorrules
+
+# NgDoc files
+/ng-doc
+
+# NgDoc files
+/ng-doc

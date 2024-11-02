@@ -17,6 +17,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ng-doc/generated": [
+        "./ng-doc/documentation/index.ts"
+      ],
+      "@ng-doc/generated/*": [
+        "./ng-doc/documentation/*"
+      ],
       "@smarttools/eslint-plugin": ["packages/eslint-plugin/src/index.ts"]
     }
   },
