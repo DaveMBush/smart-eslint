@@ -1,9 +1,10 @@
 import { ESLintUtils, TSESTree } from '@typescript-eslint/utils';
 
-export const RULE_NAME = 'no-anonymous-functions';
-export const messageId = 'anonymousFunctionsNotAllowed';
+import { messageId } from './message-id.const';
+import { noAnonymousFunctions } from './no-anonymous-functions.const';
+
 export default ESLintUtils.RuleCreator(() => __filename)({
-  name: RULE_NAME,
+  name: noAnonymousFunctions,
   meta: {
     type: 'problem',
     docs: {
@@ -11,7 +12,7 @@ export default ESLintUtils.RuleCreator(() => __filename)({
     },
     schema: [],
     messages: {
-      [messageId]: 'Ensures that all functions are named.',
+      [messageId]: 'All functions should be named so they can be seen in debug tools.',
     },
   },
   defaultOptions: [],

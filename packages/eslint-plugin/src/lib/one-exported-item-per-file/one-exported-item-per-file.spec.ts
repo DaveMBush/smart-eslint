@@ -1,11 +1,12 @@
-import { RuleTester } from '@typescript-eslint/rule-tester';
-import { RULE_NAME, messageId } from './one-exported-item-per-file';
-import rule from './one-exported-item-per-file';
 import { convertAnnotatedSourceToFailureCase } from '@angular-eslint/test-utils';
+import { RuleTester } from '@typescript-eslint/rule-tester';
 
+import { messageId } from './message-id.const';
+import rule from './one-exported-item-per-file';
+import { oneExportedItemPerFile } from './one-exported-item-per-file.const';
 const ruleTester = new RuleTester();
 
-ruleTester.run(RULE_NAME, rule, {
+ruleTester.run(oneExportedItemPerFile, rule, {
   valid: [
     `export const example = true;`,
     `const example = true;`,

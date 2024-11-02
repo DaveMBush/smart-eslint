@@ -1,11 +1,13 @@
-import { RuleTester } from '@typescript-eslint/rule-tester';
-import { RULE_NAME, messageId } from './no-anonymous-functions';
-import rule from './no-anonymous-functions';
 import { convertAnnotatedSourceToFailureCase } from '@angular-eslint/test-utils';
+import { RuleTester } from '@typescript-eslint/rule-tester';
+
+import { messageId } from './message-id.const';
+import rule from './no-anonymous-functions';
+import { noAnonymousFunctions } from './no-anonymous-functions.const';
 
 const ruleTester = new RuleTester();
 
-ruleTester.run(RULE_NAME, rule, {
+ruleTester.run(noAnonymousFunctions, rule, {
   valid: [
     `function example() {}`,
     `export function example() {}`,

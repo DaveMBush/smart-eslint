@@ -1,5 +1,6 @@
 const nx = require('@nx/eslint-plugin');
 const baseConfig = require('../../eslint.config.js');
+const typescriptParser = require('@typescript-eslint/parser');
 
 module.exports = [
   ...baseConfig,
@@ -7,6 +8,12 @@ module.exports = [
   ...nx.configs['flat/angular-template'],
   {
     files: ['**/*.ts'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        project: './tsconfig.json',
+      },
+    },
     rules: {
       '@angular-eslint/directive-selector': [
         'error',

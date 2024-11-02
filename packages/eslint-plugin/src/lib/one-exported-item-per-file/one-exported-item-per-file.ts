@@ -1,9 +1,14 @@
 import { ESLintUtils, TSESTree } from '@typescript-eslint/utils';
 
-export const RULE_NAME = 'one-exported-item-per-file';
-export const messageId = 'expectedOneExportedItemPerFile';
-export default ESLintUtils.RuleCreator(() => __filename)({
-  name: RULE_NAME,
+import { messageId } from './message-id.const';
+import { oneExportedItemPerFile } from './one-exported-item-per-file.const';
+
+function getFileName(): string {
+  return __filename;
+}
+
+export default ESLintUtils.RuleCreator(getFileName)({
+  name: oneExportedItemPerFile,
   meta: {
     type: 'problem',
     docs: {
