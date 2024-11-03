@@ -3,11 +3,11 @@ import { ESLintUtils, TSESTree } from '@typescript-eslint/utils';
 import { messageId } from './message-id.const';
 import { oneExportedItemPerFile } from './one-exported-item-per-file.const';
 
-function getFileName(): string {
+function fileName(): string {
   return __filename;
 }
 
-export default ESLintUtils.RuleCreator(getFileName)({
+export default ESLintUtils.RuleCreator(fileName)({
   name: oneExportedItemPerFile,
   meta: {
     type: 'problem',
@@ -20,11 +20,11 @@ export default ESLintUtils.RuleCreator(getFileName)({
     },
   },
   defaultOptions: [],
-  create(context) {
+  create: function create(context) {
     let exportCount = 0;
 
     return {
-      ExportNamedDeclaration(node: TSESTree.ExportNamedDeclaration) {
+      ExportNamedDeclaration: function exportNamedDeclaration(node: TSESTree.ExportNamedDeclaration) {
         if (node.declaration) {
           exportCount += 1;
         } else {
@@ -37,7 +37,7 @@ export default ESLintUtils.RuleCreator(getFileName)({
           });
         }
       },
-      ExportDefaultDeclaration(node: TSESTree.ExportDefaultDeclaration) {
+      ExportDefaultDeclaration: function exportDefaultDeclaration(node: TSESTree.ExportDefaultDeclaration) {
         exportCount += 1;
         if (exportCount > 1) {
           context.report({

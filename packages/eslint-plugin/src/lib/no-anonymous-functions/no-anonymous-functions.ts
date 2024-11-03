@@ -3,7 +3,10 @@ import { ESLintUtils, TSESTree } from '@typescript-eslint/utils';
 import { messageId } from './message-id.const';
 import { noAnonymousFunctions } from './no-anonymous-functions.const';
 
-export default ESLintUtils.RuleCreator(() => __filename)({
+function fileName(): string {
+  return __filename;
+}
+export default ESLintUtils.RuleCreator(fileName)({
   name: noAnonymousFunctions,
   meta: {
     type: 'problem',
@@ -16,9 +19,9 @@ export default ESLintUtils.RuleCreator(() => __filename)({
     },
   },
   defaultOptions: [],
-  create(context) {
+  create: function create(context) {
     return {
-      FunctionExpression(node: TSESTree.FunctionExpression) {
+      FunctionExpression: function functionExpression(node: TSESTree.FunctionExpression) {
         if (!node.id) {
           context.report({
             node,
@@ -26,7 +29,7 @@ export default ESLintUtils.RuleCreator(() => __filename)({
           });
         }
       },
-      ArrowFunctionExpression(node: TSESTree.ArrowFunctionExpression) {
+      ArrowFunctionExpression: function arrowFunctionExpression(node: TSESTree.ArrowFunctionExpression) {
         context.report({
           node,
           messageId,

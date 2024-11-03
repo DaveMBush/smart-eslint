@@ -66,8 +66,7 @@ module.exports = [
     // Override or add rules here
     rules: {
       'smartTools/one-exported-item-per-file': 'error',
-      // the API for writing lint rules depends on this
-      'smartTools/no-anonymous-functions': 'off',
+      'smartTools/no-anonymous-functions': 'error',
       'simpleImportSort/imports': [
         'error',
         {
