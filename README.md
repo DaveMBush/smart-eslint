@@ -4,6 +4,41 @@
 
 This is a set of eslint rules that encourage extreme coding standards for performance and debugging.
 
+## Installation
+
+```bash
+npm install @smarttools/eslint-plugin
+```
+
+## Usage
+
+ESLint Flat-file Configuration
+
+```javascript
+const smartTools = require("@smarttools/eslint-plugin");
+
+module.exports = [
+  files: ["**/*.ts],
+  plugins: {
+    smartTools
+  },
+  rules: {
+    "smartTools/rule-name-here": "error",
+  },
+];
+```
+
+ESLint Config Object
+
+```javascript
+module.exports = {
+  plugins: ["@smarttools"],
+  rules: {
+    "@smarttools/rule-name-here": "error",
+  },
+};
+```
+
 ## Rules
 
 ### no-anonymous-functions
@@ -19,3 +54,5 @@ This rule discourages the use of anonymous functions of any kind. There are mult
 If you've ever worked on a very large codebase, you've already seen the problem where a single file has a bunch of exports in it. And then, when you are trying to re-organize the code into multiple libraries, you realize the problems multiple exports in the same file can cause you. Do yourself a favor and get in the habit of only exporting one item per file. Your future self will thank you.
 
 ### More to come
+
+...
