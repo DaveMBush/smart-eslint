@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "name": "smart-eslint",
+      "path": "."
+    },
+    {
+      "name": "smart-ngrx",
+      "path": "../SmartNgRX"
+    }
+
+  ],
+  "settings": {}
+}

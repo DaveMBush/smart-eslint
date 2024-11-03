@@ -58,10 +58,11 @@
       },
       "configurations": {
         "production": {
+          "baseHref": "/smart-eslint/",
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "500kb",
+              "maximumWarning": "3mb",
               "maximumError": "3mb"
             },
             {
@@ -73,9 +74,11 @@
           "outputHashing": "all"
         },
         "development": {
+          "baseHref": "/",
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "namedChunks": true
         }
       },
       "defaultConfiguration": "production"
@@ -105,6 +108,52 @@
         "staticFilePath": "dist/apps/documentation/browser",
         "spa": true
       }
+    },
+    "server": {
+      "dependsOn": [
+        "build"
+      ],
+      "executor": "@nx/angular:webpack-server",
+      "options": {
+        "outputPath": "documentation/server",
+        "main": "apps/documentation/server.ts",
+        "tsConfig": "apps/documentation/tsconfig.server.json"
+      },
+      "configurations": {},
+      "defaultConfiguration": "production"
+    },
+    "serve-ssr": {
+      "executor": "@angular-devkit/build-angular:ssr-dev-server",
+      "configurations": {
+        "development": {
+          "browserTarget": "documentation:build:development",
+          "serverTarget": "documentation:server:development"
+        },
+        "production": {
+          "browserTarget": "documentation:build:production",
+          "serverTarget": "documentation:server:production"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "prerender": {
+      "executor": "@angular-devkit/build-angular:prerender",
+      "options": {
+        "routes": [
+          "/"
+        ]
+      },
+      "configurations": {
+        "development": {
+          "browserTarget": "documentation:build:development",
+          "serverTarget": "documentation:server:development"
+        },
+        "production": {
+          "browserTarget": "documentation:build:production",
+          "serverTarget": "documentation:server:production"
+        }
+      },
+      "defaultConfiguration": "production"
     }
   }
 }
