@@ -12,6 +12,11 @@ ruleTester.run(noAnonymousFunctions, rule, {
     `function example() {}`,
     `export function example() {}`,
     `const namedFunctionExpression = function named() { return true; };`,
+    `class Example {
+      method() {
+        return true;
+      }
+    }`,
   ],
   invalid: [
     convertAnnotatedSourceToFailureCase({
