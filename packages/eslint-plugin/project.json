@@ -20,7 +20,7 @@
         "outputPath": "dist/packages/eslint-plugin",
         "main": "packages/eslint-plugin/src/index.ts",
         "tsConfig": "packages/eslint-plugin/tsconfig.lib.json",
-        "assets": [],
+        "assets": ["packages/eslint-plugin/*.md"],
         "format": ["cjs"]
       }
     },
