@@ -22,7 +22,7 @@ ESLint Flat-file Configuration
 const smartTools = require("@smarttools/eslint-plugin");
 
 module.exports = [
-  files: ["**/*.ts],
+  files: ["**/*.ts"],
   plugins: {
     smartTools
   },
