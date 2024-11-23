@@ -1,5 +1,10 @@
 # @smarttools/eslint-plugin
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![CI](https://github.com/DaveMBush/smart-eslint/actions/workflows/ci.yml/badge.svg)
+
+
+
 ## What is @smarttools/eslint-plugin?
 
 This is a set of eslint rules that encourage extreme coding standards for performance and debugging.
