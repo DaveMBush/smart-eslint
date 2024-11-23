@@ -2,5 +2,22 @@
   "name": "@smarttools/eslint-plugin",
   "version": "0.0.1",
   "type": "commonjs",
-  "main": "./index.cjs"
+  "main": "./index.cjs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaveMBush/smart-eslint.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "performance",
+    "debugging",
+    "typescript",
+    "devtools"
+  ]
 }
