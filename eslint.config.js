@@ -11,7 +11,6 @@ const maxParamsNoConstructor = require('eslint-plugin-max-params-no-constructor'
 const jest = require('eslint-plugin-jest');
 const prettier = require('eslint-config-prettier');
 const typescriptEslintPlugin = require('@typescript-eslint/eslint-plugin');
-const smartTools = require('./dist/packages/eslint-plugin');
 const simpleImportSort = require('eslint-plugin-simple-import-sort');
 
 module.exports = [
@@ -33,7 +32,6 @@ module.exports = [
       jest,
       prettier,
       simpleImportSort,
-      smartTools,
       typescriptEslintPlugin
     },
   },
@@ -65,8 +63,6 @@ module.exports = [
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     // Override or add rules here
     rules: {
-      'smartTools/one-exported-item-per-file': 'error',
-      'smartTools/no-anonymous-functions': 'error',
       'simpleImportSort/imports': [
         'error',
         {

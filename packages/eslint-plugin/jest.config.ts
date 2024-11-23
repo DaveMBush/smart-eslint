@@ -1,5 +1,5 @@
 export default {
-  displayName: 'eslint-plugin',
+  displayName: '@smarttools/eslint-plugin',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
