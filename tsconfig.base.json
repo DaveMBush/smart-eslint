@@ -12,28 +12,15 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ng-doc/generated": [
-        "./ng-doc/documentation/index.ts"
-      ],
-      "@ng-doc/generated/*": [
-        "./ng-doc/documentation/*"
-      ],
-      "@smarttools/eslint-plugin": [
-        "packages/eslint-plugin/src/index.ts"
-      ]
+      "@ng-doc/generated": ["./ng-doc/documentation/index.ts"],
+      "@ng-doc/generated/*": ["./ng-doc/documentation/*"],
+      "@smarttools/eslint-plugin": ["packages/eslint-plugin/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp",
-    "**/eslint.config.js"
-  ]
+  "exclude": ["node_modules", "tmp", "**/eslint.config.js"]
 }
