@@ -1,5 +1,6 @@
 # @smarttools/eslint-plugin
 
+[![NPM Version](https://img.shields.io/npm/v/%40smarttools%2Feslint-plugin)](https://www.npmjs.com/package/@smarttools/eslint-plugin)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![CI](https://github.com/DaveMBush/smart-eslint/actions/workflows/ci.yml/badge.svg)
 
@@ -21,7 +22,7 @@ ESLint Flat-file Configuration
 const smartTools = require("@smarttools/eslint-plugin");
 
 module.exports = [
-  files: ["**/*.ts],
+  files: ["**/*.ts"],
   plugins: {
     smartTools
   },
