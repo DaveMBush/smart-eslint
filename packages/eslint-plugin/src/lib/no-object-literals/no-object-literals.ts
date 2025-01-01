@@ -1,8 +1,14 @@
-import { TSESLint, TSESTree } from '@typescript-eslint/utils';
+import { ESLintUtils, TSESTree } from '@typescript-eslint/utils';
 
 import { messageId } from './message-id.const';
+import { noObjectLiterals } from './no-object-literals.const';
 
-const rule: TSESLint.RuleModule<typeof messageId, never[]> = {
+function fileName(): string {
+  return __filename;
+}
+
+export default ESLintUtils.RuleCreator(fileName)({
+  name: noObjectLiterals,
   defaultOptions: [],
   meta: {
     type: 'suggestion',
@@ -14,7 +20,7 @@ const rule: TSESLint.RuleModule<typeof messageId, never[]> = {
     },
     schema: [],
   },
-  create(context) {
+  create: function create(context) {
     return {
       ObjectExpression(node: TSESTree.ObjectExpression) {
         const parent = node.parent;
@@ -35,6 +41,4 @@ const rule: TSESLint.RuleModule<typeof messageId, never[]> = {
       },
     };
   },
-};
-
-export default rule;
+});
