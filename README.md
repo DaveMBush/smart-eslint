@@ -53,6 +53,16 @@ This rule discourages the use of anonymous functions of any kind. There are mult
 - In some cases, they can increase performance overhead. While this is admittedly a micro-optimization, those of use looking for every millisecond of performance will avoid them.
 - They make it harder to understand code. When you have a function that is more than a few lines, it can be difficult to understand what the function does just by reading the function body. Names help.
 
+### no-object-literals
+
+This rule discourages the use of object literals. They ARE allowed as parameters to constructors because the assumption is that you are going to use it to initialize the class.
+
+There are multiple reasons why you should avoid them:
+
+- They are difficult to debug because you can't see the name in the developer tools. This means when you are tracking down a performance issue in a flame chart, looking at a call stack, or tracking down a memory leak, you'll have to drill into the code to see what the function does.
+- Changing the shape of an object (the order or type of fields) causes the javascript interpreter to create a new internal class for each shape. This has an impact both on memory and performance. By using classes, which use prototypes to fix the order of the fields, we avoid creating a new, internal, class for each shape. For toy applications, this is probably not a problem. For large applications this is a concern worth worrying about.
+- They make it harder to understand code. When you have a function that is more than a few lines, it can be difficult to understand what the function does just by reading the function body. Names help.
+
 ### one-exported-item-per-file
 
 If you've ever worked on a very large codebase, you've already seen the problem where a single file has a bunch of exports in it. And then, when you are trying to re-organize the code into multiple libraries, you realize the problems multiple exports in the same file can cause you. Do yourself a favor and get in the habit of only exporting one item per file. Your future self will thank you.
