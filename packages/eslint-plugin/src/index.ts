@@ -1,6 +1,7 @@
 import type { Linter } from '@typescript-eslint/utils/ts-eslint';
 
 import noAnonymousFunctions from './lib/no-anonymous-functions/no-anonymous-functions';
+import noObjectLiterals from './lib/no-object-literals/no-object-literals';
 import oneExportedItemPerFile from './lib/one-exported-item-per-file/one-exported-item-per-file';
 
 // eslint-disable-next-line typescriptEslintPlugin/no-require-imports, typescriptEslintPlugin/no-var-requires -- needed to get information from package.json
@@ -14,6 +15,7 @@ const meta = {
 const rules = {
 	'one-exported-item-per-file': oneExportedItemPerFile,
 	'no-anonymous-functions': noAnonymousFunctions,
+	'no-object-literals': noObjectLiterals,
 } satisfies Linter.PluginRules;
 
 module.exports = { meta, rules } satisfies Linter.Plugin;
