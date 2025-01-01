@@ -12,6 +12,7 @@ const jest = require('eslint-plugin-jest');
 const prettier = require('eslint-config-prettier');
 const typescriptEslintPlugin = require('@typescript-eslint/eslint-plugin');
 const simpleImportSort = require('eslint-plugin-simple-import-sort');
+const stylisticJs = require('@stylistic/eslint-plugin-js');
 
 module.exports = [
   sonarjs.configs.recommended,
@@ -32,7 +33,8 @@ module.exports = [
       jest,
       prettier,
       simpleImportSort,
-      typescriptEslintPlugin
+      stylisticJs,
+      typescriptEslintPlugin,
     },
   },
   {
@@ -293,7 +295,9 @@ module.exports = [
       'typescriptEslintPlugin/adjacent-overload-signatures': 'error',
       'typescriptEslintPlugin/ban-ts-comment': 'error',
       'typescriptEslintPlugin/ban-tslint-comment': 'error',
-      'typescriptEslintPlugin/ban-types': 'error',
+      'typescriptEslintPlugin/no-empty-object-type': 'error',
+      'typescriptEslintPlugin/no-unsafe-function-type': 'error',
+      'typescriptEslintPlugin/no-wrapper-object-types': 'error',
       //// off because of prettier
       'typescriptEslintPlugin/brace-style': 'off',
       'typescriptEslintPlugin/consistent-indexed-object-style': 'error',
@@ -353,7 +357,7 @@ module.exports = [
       ],
       'typescriptEslintPlugin/explicit-module-boundary-types': 'error',
       //// Improves code readability
-      'typescriptEslintPlugin/lines-between-class-members': [
+      'stylisticJs/lines-between-class-members': [
         'error',
         'always',
         {
@@ -541,7 +545,7 @@ module.exports = [
       //// This rule detects when an as cast is doing the same job as
       //// an ! would, and suggests fixing the code to be an !
       'typescriptEslintPlugin/non-nullable-type-assertion-style': 'error',
-      'typescriptEslintPlugin/padding-line-between-statements': 'error',
+      'stylisticJs/padding-line-between-statements': 'error',
       'typescriptEslintPlugin/prefer-enum-initializers': 'error',
       // for of is 10x slower than for/next.  Use the forNext function
       // instead to gain the performance benefits as well as readability.
@@ -600,12 +604,8 @@ module.exports = [
       'unicorn/filename-case': 'error',
       'unicorn/no-abusive-eslint-disable': 'error',
       'importPlugin/no-duplicates': ['error'],
-      //'deprecation/deprecation': 'error',
-      //// The next two rules don"t allow default exports particularly
-      //// to defend against React guys who are still doing this even
-      //// though it really makes no sense there either 🙄
       'importPlugin/prefer-default-export': 'off',
-      'importPlugin/no-default-export': 'error',
+      'importPlugin/no-default-export': 'off', // not needed for lint rules
       //// If you need more params, your function/class is probably doing too
       //// much. So, the first thing you should look at is breaking things down
       //// more. If all else fails, your second choice would be passing an object.
