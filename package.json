@@ -27,7 +27,7 @@
     "@angular/router": "19.0.5",
     "@angular/ssr": "19.0.6",
     "@ng-doc/app": "18.3.0",
-    "@ng-doc/builder": "18.3.0",
+    "@ng-doc/builder": "19.1.0",
     "@ng-doc/core": "18.3.0",
     "@ng-doc/ui-kit": "18.3.0",
     "express": "~4.21.2",
