@@ -3,6 +3,14 @@
   "version": "0.0.1",
   "type": "commonjs",
   "main": "./index.cjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.csj",
+      "require": "./index.cjs",
+      "types": "./index.d.ts"
+    }
+  },
   "publishConfig": {
     "access": "public"
   },

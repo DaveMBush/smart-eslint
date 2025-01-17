@@ -13,15 +13,34 @@
   },
   "tags": [],
   "targets": {
-    "build": {
+    "build-lib": {
       "executor": "@nx/esbuild:esbuild",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/packages/eslint-plugin",
         "main": "packages/eslint-plugin/src/index.ts",
         "tsConfig": "packages/eslint-plugin/tsconfig.lib.json",
-        "assets": ["packages/eslint-plugin/*.md"],
-        "format": ["cjs"]
+        "assets": [
+          "packages/eslint-plugin/*.md"
+        ],
+        "generatePackageJson": true,
+        "format": [
+          "cjs"
+        ],
+        "dts": true,
+        "bundle": true,
+        "thirdParty": true
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        "build-lib"
+      ],
+      "options": {
+        "command": "echo 'Copying types...' && cp dist/packages/eslint-plugin/src/index.d.ts dist/packages/eslint-plugin"
       }
     },
     "nx-release-publish": {
