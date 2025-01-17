@@ -28,15 +28,8 @@ interface ESLintPlugin extends Linter.Plugin {
 
 // eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint rule names use kebab-case
 const plugin: ESLintPlugin = {
-  meta: {
-    name,
-    version,
-  },
-  rules: {
-    'one-exported-item-per-file': oneExportedItemPerFile,
-    'no-anonymous-functions': noAnonymousFunctions,
-    'no-object-literals': noObjectLiterals,
-  },
+  meta,
+  rules,
 };
 
 export = plugin;
