@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:documentation": "nx serve documentation --configuration=serve --port=4201",
     "build": "nx affected:build",
     "lint": "nx affected:lint",
     "lint:fix": "nx affected:lint --fix",
     "test": "nx affected:test",
     "test:coverage": "nx affected:test --coverage",
-    "format": "nx affected:format",
+    "format": "nx format:write",
+    "format:check": "nx format:check",
     "dupcheck": "pnpm jscpd",
     "reset": "rm -rf dist && rm -rf node_modules && rm -rf .angular && rm -rf .nx && pnpm install"
   },
@@ -81,6 +81,7 @@
     "jest-environment-jsdom": "^29.4.1",
     "jest-environment-node": "^29.7.0",
     "jest-preset-angular": "14.4.2",
+    "jscpd": "4.0.5",
     "nx": "20.3.1",
     "prettier": "^3.4.2",
     "ts-jest": "^29.1.0",

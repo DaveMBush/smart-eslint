@@ -36,9 +36,9 @@ ESLint Config Object
 
 ```javascript
 module.exports = {
-  plugins: ["@smarttools"],
+  plugins: ['@smarttools'],
   rules: {
-    "@smarttools/rule-name-here": "error",
+    '@smarttools/rule-name-here': 'error',
   },
 };
 ```
