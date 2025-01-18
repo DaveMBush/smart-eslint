@@ -60,7 +60,10 @@
   "release": {
     "version": {
       "preVersionCommand": "npx nx run-many -t build"
-    }
+    },
+    "projects": [
+      "eslint-plugin"
+    ]
   },
   "plugins": [
     {
