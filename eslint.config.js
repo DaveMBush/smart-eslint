@@ -5,7 +5,6 @@ const importPlugin = require('eslint-plugin-import');
 const angularEslintPlugin = require('@angular-eslint/eslint-plugin');
 const comments = require('eslint-plugin-eslint-comments');
 const unicorn = require('eslint-plugin-unicorn');
-const rxjs = require('eslint-plugin-rxjs');
 const unusedImports = require('eslint-plugin-unused-imports');
 const maxParamsNoConstructor = require('eslint-plugin-max-params-no-constructor');
 const jest = require('eslint-plugin-jest');
@@ -27,7 +26,6 @@ module.exports = [
       angularEslintPlugin,
       comments,
       unicorn,
-      rxjs,
       unusedImports,
       maxParamsNoConstructor,
       jest,
@@ -115,7 +113,6 @@ module.exports = [
         'typescriptEslintPlugin/no-unsafe-call',
         'typescriptEslintPlugin/no-unsafe-member-access',
         'typescriptEslintPlugin/no-unsafe-return',
-        'rxjs/no-implicit-any-catch',
         // the following enforce single responsibility principle
         'complexity',
         'max-depth', // also for code clarity
