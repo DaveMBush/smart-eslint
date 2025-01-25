@@ -15,22 +15,44 @@
   "targets": {
     "build-lib": {
       "executor": "@nx/esbuild:esbuild",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/packages/eslint-plugin",
         "main": "packages/eslint-plugin/src/index.ts",
         "tsConfig": "packages/eslint-plugin/tsconfig.lib.json",
-        "assets": ["packages/eslint-plugin/*.md"],
-        "generatePackageJson": true,
-        "format": ["cjs"],
+        "assets": [
+          "packages/eslint-plugin/*.md",
+          {
+            "input": "packages/eslint-plugin",
+            "glob": "package.json",
+            "output": "."
+          }
+        ],
+        "format": [
+          "cjs"
+        ],
         "dts": true,
         "bundle": true,
-        "thirdParty": true
+        "thirdParty": false,
+        "includeDependenciesInPackageJson": false,
+        "external": [
+          "@typescript-eslint/utils",
+          "@angular-eslint/test-utils",
+          "@typescript-eslint/rule-tester"
+        ],
+        "esbuildOptions": {
+          "minify": true,
+          "treeShaking": true
+        }
       }
     },
     "build": {
       "executor": "nx:run-commands",
-      "dependsOn": ["build-lib"],
+      "dependsOn": [
+        "build-lib"
+      ],
       "options": {
         "command": "echo 'Copying types...' && cp dist/packages/eslint-plugin/src/index.d.ts dist/packages/eslint-plugin"
       }
@@ -42,7 +64,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "packages/eslint-plugin/jest.config.ts"
       }
@@ -50,7 +74,9 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["packages/eslint-plugin/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/eslint-plugin/**/*.ts"
+        ]
       }
     }
   }
