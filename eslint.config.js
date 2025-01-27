@@ -103,7 +103,7 @@ module.exports = [
       'comments/no-restricted-disable': [
         'error',
         'eslint-comments/no-restricted-disable', // prevent from disabling THIS rule
-        '@nx/enforce-module-boundaries', // So we can implement buildable libs and eventually build caching
+        '@nx/enforce-module-boundaries', 
         'no-console', // don"t checkin with console.  Use debugging API
         // // Strong typing issues
         'typescriptEslintPlugin/explicit-function-return-type',
