@@ -1,7 +1,7 @@
 const util = require('util');
 const smart = require('@smarttools/eslint-plugin');
 
-const result =util.inspect(smart, { depth: null });
+const result = util.inspect(smart, { depth: null });
 
 if (result.includes('[Circular')) {
   console.log('Circular reference found');
@@ -11,4 +11,3 @@ if (result.includes('[Circular')) {
   console.log('No circular reference found');
   process.exit(0);
 }
-
