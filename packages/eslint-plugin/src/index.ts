@@ -26,7 +26,6 @@ interface ESLintPlugin extends Linter.Plugin {
   rules: typeof rules;
 }
 
-// eslint-disable-next-line @typescript-eslint/naming-convention -- ESLint rule names use kebab-case
 const plugin: ESLintPlugin = {
   meta,
   rules,
