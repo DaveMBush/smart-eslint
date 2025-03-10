@@ -4,7 +4,6 @@ const sonarjs = require('eslint-plugin-sonarjs');
 const importPlugin = require('eslint-plugin-import');
 const angularEslintPlugin = require('@angular-eslint/eslint-plugin');
 const comments = require('eslint-plugin-eslint-comments');
-const unicorn = require('eslint-plugin-unicorn');
 const unusedImports = require('eslint-plugin-unused-imports');
 const maxParamsNoConstructor = require('eslint-plugin-max-params-no-constructor');
 const jest = require('eslint-plugin-jest');
@@ -14,6 +13,7 @@ const simpleImportSort = require('eslint-plugin-simple-import-sort');
 
 const eslintConfig = async () => {
   const { default: stylisticJs } = await import('@stylistic/eslint-plugin-js');
+  const { default: unicorn } = await import('eslint-plugin-unicorn');
   return [
     sonarjs.configs.recommended,
     ...nx.configs['flat/base'],
