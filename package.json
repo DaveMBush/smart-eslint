@@ -32,7 +32,7 @@
     "@nx/nest": "20.6.0",
     "@nx/next": "20.6.0",
     "@nx/node": "20.6.0",
-    "@nx/web": "20.6.0",
+    "@nx/web": "20.6.2",
     "@nx/webpack": "20.6.0",
     "@nx/workspace": "20.6.0",
     "@schematics/angular": "19.2.1",
