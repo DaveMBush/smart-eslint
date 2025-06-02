@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@angular-eslint/test-utils':
-        specifier: 19.4.0
-        version: 19.4.0(@angular-eslint/template-parser@19.7.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/rule-tester@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/utils@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3)
+        specifier: 19.7.0
+        version: 19.7.0(@angular-eslint/template-parser@19.7.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/rule-tester@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/utils@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3)
       '@angular/core':
         specifier: 19.2.7
         version: 19.2.7(rxjs@7.8.2)(zone.js@0.15.1)
@@ -328,10 +328,10 @@ packages:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '*'
 
-  '@angular-eslint/test-utils@19.4.0':
-    resolution: {integrity: sha512-T2iP/MHCEQOGFiviEUfbnF1/172npj//jYdveOZGTyZH12BIWEUqc0Q+QayafNrxJ+6evAZOJviVJofrnyWjrA==}
+  '@angular-eslint/test-utils@19.7.0':
+    resolution: {integrity: sha512-SnBECjq3We2eQUMBFh96NmABgrcAposltM1hDbbgSF/UB2Tsxto/8C/zhOyiJpssIDnnXT5EhgbTldBQDuZVww==}
     peerDependencies:
-      '@angular-eslint/template-parser': 19.4.0
+      '@angular-eslint/template-parser': 19.7.0
       '@typescript-eslint/parser': ^7.11.0 || ^8.0.0
       '@typescript-eslint/rule-tester': ^7.11.0 || ^8.0.0
       '@typescript-eslint/utils': ^7.11.0 || ^8.0.0
@@ -9112,7 +9112,7 @@ snapshots:
       eslint-scope: 8.3.0
       typescript: 5.7.3
 
-  '@angular-eslint/test-utils@19.4.0(@angular-eslint/template-parser@19.7.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/rule-tester@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/utils@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3)':
+  '@angular-eslint/test-utils@19.7.0(@angular-eslint/template-parser@19.7.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/rule-tester@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(@typescript-eslint/utils@8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3))(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3)':
     dependencies:
       '@typescript-eslint/rule-tester': 8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3)
       '@typescript-eslint/utils': 8.33.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.7.3)

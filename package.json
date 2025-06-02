@@ -15,7 +15,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-eslint/test-utils": "19.4.0",
+    "@angular-eslint/test-utils": "19.7.0",
     "express": "5.1.0",
     "zone.js": "0.15.1",
     "@angular/core": "19.2.7"
