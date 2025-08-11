@@ -18,7 +18,7 @@
     "@angular-eslint/test-utils": "20.1.1",
     "express": "5.1.0",
     "zone.js": "0.15.1",
-    "@angular/core": "20.0.3"
+    "@angular/core": "20.1.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
