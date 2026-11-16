@@ -38,7 +38,7 @@ importers:
         version: 21.4.0(@babel/traverse@7.29.14(supports-color@7.2.0))(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24))(@zkochan/js-yaml@0.0.7)(debug@4.4.3(supports-color@7.2.0))(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))(nx@22.7.10(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24)))(supports-color@7.2.0)(verdaccio@6.1.6(bare-buffer@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typanion@3.14.0))
       '@nx/eslint-plugin':
         specifier: 21.4.0
-        version: 21.4.0(@babel/traverse@7.29.14(supports-color@7.2.0))(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24))(@typescript-eslint/parser@8.72.2(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(debug@4.4.3(supports-color@7.2.0))(eslint-config-prettier@10.1.5(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0)))(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))(nx@22.7.10(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24)))(supports-color@7.2.0)(typescript@5.8.3)(verdaccio@6.1.6(bare-buffer@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typanion@3.14.0))
+        version: 21.4.0(@babel/traverse@7.29.14(supports-color@7.2.0))(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24))(@typescript-eslint/parser@8.72.2(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(debug@4.4.3(supports-color@7.2.0))(eslint-config-prettier@10.1.8(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0)))(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))(nx@22.7.10(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24)))(supports-color@7.2.0)(typescript@5.8.3)(verdaccio@6.1.6(bare-buffer@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typanion@3.14.0))
       '@nx/jest':
         specifier: 21.4.0
         version: 21.4.0(@babel/traverse@7.29.14(supports-color@7.2.0))(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24))(@types/node@24.0.3)(babel-plugin-macros@3.1.0)(debug@4.4.3(supports-color@7.2.0))(nx@22.7.10(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24)))(supports-color@7.2.0)(ts-node@10.9.2(@swc/core@1.12.14(@swc/helpers@0.5.24))(@types/node@24.0.3)(typescript@5.8.3))(typescript@5.8.3)(verdaccio@6.1.6(bare-buffer@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typanion@3.14.0))
@@ -106,8 +106,8 @@ importers:
         specifier: ^9.28.0
         version: 9.39.5(jiti@2.7.0)(supports-color@7.2.0)
       eslint-config-prettier:
-        specifier: 10.1.5
-        version: 10.1.5(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))
+        specifier: 10.1.8
+        version: 10.1.8(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))
       eslint-plugin-eslint-comments:
         specifier: 3.2.0
         version: 3.2.0(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))
@@ -5142,8 +5142,8 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-  eslint-config-prettier@10.1.5:
-    resolution: {integrity: sha512-zc1UmCpNltmVY34vuLRV61r1K27sWuX39E+uyUnY8xS2Bex88VV9cugG+UZbRSRGtGyFboj+D8JODyme1plMpw==}
+  eslint-config-prettier@10.1.8:
+    resolution: {integrity: sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -12472,7 +12472,7 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@nx/eslint-plugin@21.4.0(@babel/traverse@7.29.14(supports-color@7.2.0))(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24))(@typescript-eslint/parser@8.72.2(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(debug@4.4.3(supports-color@7.2.0))(eslint-config-prettier@10.1.5(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0)))(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))(nx@22.7.10(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24)))(supports-color@7.2.0)(typescript@5.8.3)(verdaccio@6.1.6(bare-buffer@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typanion@3.14.0))':
+  '@nx/eslint-plugin@21.4.0(@babel/traverse@7.29.14(supports-color@7.2.0))(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24))(@typescript-eslint/parser@8.72.2(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(debug@4.4.3(supports-color@7.2.0))(eslint-config-prettier@10.1.8(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0)))(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))(nx@22.7.10(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24)))(supports-color@7.2.0)(typescript@5.8.3)(verdaccio@6.1.6(bare-buffer@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typanion@3.14.0))':
     dependencies:
       '@nx/devkit': 21.4.0(nx@22.7.10(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24)))
       '@nx/js': 21.4.0(@babel/traverse@7.29.14(supports-color@7.2.0))(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24))(debug@4.4.3(supports-color@7.2.0))(nx@22.7.10(@swc-node/register@1.10.10(@swc/core@1.12.14(@swc/helpers@0.5.24))(@swc/types@0.1.28)(supports-color@7.2.0)(typescript@5.8.3))(@swc/core@1.12.14(@swc/helpers@0.5.24)))(supports-color@7.2.0)(verdaccio@6.1.6(bare-buffer@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typanion@3.14.0))
@@ -12487,7 +12487,7 @@ snapshots:
       semver: 7.8.6
       tslib: 2.9.1
     optionalDependencies:
-      eslint-config-prettier: 10.1.5(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))
+      eslint-config-prettier: 10.1.8(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -16057,7 +16057,7 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-config-prettier@10.1.5(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0)):
+  eslint-config-prettier@10.1.8(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0)):
     dependencies:
       eslint: 9.39.5(jiti@2.7.0)(supports-color@7.2.0)
 
