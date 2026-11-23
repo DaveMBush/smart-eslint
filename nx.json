@@ -71,5 +71,8 @@
       }
     }
   ],
-  "analytics": true
+  "analytics": true,
+  "migrate": {
+    "agentic": false
+  }
 }

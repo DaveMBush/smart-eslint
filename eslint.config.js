@@ -88,6 +88,7 @@ const eslintConfig = async () => {
     {
       files: ['**/*.ts'],
       rules: {
+        'sonarjs/argument-type': 'off',
         // Standard ESLint Rules
         complexity: [
           'error',
